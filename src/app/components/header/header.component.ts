@@ -1,5 +1,6 @@
-import {Component, signal, WritableSignal} from '@angular/core';
+import {Component, inject, signal, WritableSignal} from '@angular/core';
 import {PrimaryButtonComponent} from '../primary-button/primary-button.component';
+import {CartService} from '../../data-access/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -12,5 +13,5 @@ import {PrimaryButtonComponent} from '../primary-button/primary-button.component
 })
 export class HeaderComponent {
 
-
+cartSrv = inject(CartService);
 }
