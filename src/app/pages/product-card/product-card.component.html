@@ -12,7 +12,11 @@
         {{ '$' + product().price }}
     </span>
 
-      <app-primary-button label="Add to Cart" class="mt-3" />
+      <app-primary-button
+        label="Add to Cart"
+        class="mt-3"
+      (btnClicked)="cartSrv.addToCart(product())"
+      />
     </div>
 
     <span class="absolute top-2 right-3 text-sm font-bold" [class]="product().stock ? 'text-green-500' : 'text-red-500' ">
