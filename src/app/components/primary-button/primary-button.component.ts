@@ -9,7 +9,7 @@ import {Component, input, output} from '@angular/core';
 })
 export class PrimaryButtonComponent {
 
-  label = input();
+  label = input('');
   btnClicked = output();
 
 }
